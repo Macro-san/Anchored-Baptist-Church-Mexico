@@ -1,0 +1,58 @@
+:root {
+  --accent: #1F2A44;   /* main color: headline, button */
+  --ink: #1F2430;
+  --muted: #4A5160;
+  --bg: #FAF7F2;
+  --band: #F1EBDD;
+  --line: #E4DCCB;
+  --serif: Lora, Georgia, serif;
+  --sans: Inter, system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.65 var(--sans); }
+a { color: inherit; text-decoration: none; }
+a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+h1, h2 { font-family: var(--serif); margin: 0; color: var(--accent); }
+h2 { font-size: 32px; margin-bottom: 16px; }
+p { margin: 0; color: var(--muted); }
+
+/* Header */
+.site-header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 32px; padding: 24px 32px; }
+.logo { font-family: var(--serif); font-weight: 700; font-size: 22px; color: var(--accent); }
+.nav { display: flex; gap: 28px; font-size: 15px; }
+.nav a:hover { color: var(--accent); }
+
+/* Banner photo */
+.banner img { display: block; width: 100%; height: 400px; object-fit: cover; object-position: center; }
+
+/* Hero */
+.hero { max-width: 720px; margin: 0 auto; padding: 72px 32px 88px; text-align: center; }
+.hero h1 { font-size: 60px; line-height: 1.1; margin-bottom: 20px; }
+.hero p { font-size: 20px; margin-bottom: 36px; }
+.btn { display: inline-block; background: var(--accent); color: #fff; padding: 14px 30px; border-radius: 6px; font-weight: 600; }
+.btn:hover { opacity: .9; }
+
+/* Sections */
+.section { padding: 72px 32px; }
+.narrow { max-width: 680px; margin: 0 auto; }
+.band { background: var(--band); }
+
+/* Service times */
+.times { margin: 0; }
+.times div { display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+.times div:first-child { border-top: 1px solid var(--line); }
+.times dt { font-weight: 600; }
+.times dd { margin: 0; color: var(--muted); }
+
+/* Footer */
+.site-footer { text-align: center; padding: 32px; font-size: 14px; }
+
+/* Phones */
+@media (max-width: 600px) {
+  .site-header { padding: 20px; }
+  .hero { padding: 64px 20px 72px; }
+  .hero h1 { font-size: 40px; }
+  .section { padding: 56px 20px; }
+  h2 { font-size: 28px; }
+}
